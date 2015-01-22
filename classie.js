@@ -29,13 +29,13 @@ var hasClass, addClass, removeClass;
 
 if ( 'classList' in document.documentElement ) {
   hasClass = function( elem, c ) {
-    return elem.classList.contains( c );
+    return elem.classList.contains( c.replace(/^\s+|\s+$/g,"" );
   };
   addClass = function( elem, c ) {
-    elem.classList.add( c );
+    elem.classList.add( c.replace(/^\s+|\s+$/g );
   };
   removeClass = function( elem, c ) {
-    elem.classList.remove( c );
+    elem.classList.remove( c.replace(/^\s+|\s+$/g );
   };
 }
 else {
